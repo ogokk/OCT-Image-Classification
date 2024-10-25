@@ -4,7 +4,6 @@ Created on Mon Oct 14 11:43:39 2024
 
 @author: ozangokkan
 """
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
