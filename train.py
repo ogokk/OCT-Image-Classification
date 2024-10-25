@@ -5,7 +5,6 @@ Created on Thu Oct 14 11:43:39 2024
 @author: ozangokkan
 """
 
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -31,8 +30,6 @@ warnings.filterwarnings("ignore")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-
-
 albumentations_transforms=A.Compose([A.HorizontalFlip(p=.5),
                            A.ShiftScaleRotate(rotate_limit=2,value=0,
                                               border_mode=cv2.BORDER_CONSTANT, p=.5),
@@ -55,11 +52,9 @@ class Transform():
        return self.transform(image=np.array(image))["image"]
    
     
-   
 train_dir = 'C:/Users/ProArt/Desktop/DATASET/TRAIN'
 # train_dataset = ImageFolder(train_dir, transform=data_transforms) # used for torchvision.transforms to augment images
 train_dataset = ImageFolder(train_dir, transform=Transform(albumentations_transforms)) # used for albumentations to augment images
-
 
 
 class CombinedModel(nn.Module):
@@ -96,18 +91,12 @@ class CombinedModel(nn.Module):
         return output
 
 
-# # Example usage
 # model = CombinedModel(num_classes=5)
 # x = torch.randn(32, 3, 224, 224)  # Example input
 # output = model(x)
 
-
-
 model = CombinedModel(num_classes=5)
 model.to(device)
-
-
-
 
 def train_model(train_loader, model, criterion, optimizer, scaler, device):
     model.train()
