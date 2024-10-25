@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct 25 13:18:03 2024
+Created on Fri Oct 20 13:18:03 2024
 
-@author: ProArt
+@author: ozangokkan
 """
 import torch
 from train import CombinedModel
