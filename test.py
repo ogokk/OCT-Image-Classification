@@ -19,7 +19,7 @@ mcc_scores_per_batch = []
 bas_per_batch = []
 recall_per_batch = []
 
-# Data preprocessing and augmentation
+# Data preprocessing
 test_data_transforms = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -40,7 +40,7 @@ mcc_scores_per_batch = []
 bas_per_batch = []
 with torch.no_grad():
     model = CombinedModel(num_classes=5)  # Use the same num_classes as in training
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")  # Adjust for your setup
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     path = 'C:/Users/ProArt/Desktop/ozan/model-fold-4.pth'
     model.load_state_dict(torch.load(path))
@@ -56,7 +56,7 @@ for i in range(monte_carlo_iter):
         np.random.shuffle(indices)
     test_indices = indices
     
-    # Creating PT data samplers and loaders:
+    # Creating data samplers and loaders:
     test_sampler = SubsetRandomSampler(test_indices)
     
     test_loader = DataLoader(test_dataset, batch_size=batch_size, 
@@ -105,8 +105,6 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 # #Single Image prediction
 # from PIL import Image
 # import cv2
-# from torch.autograd import Variable
-
 
 # def pre_image(image_path,model):
 #    img = Image.open(image_path)
@@ -118,7 +116,6 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 #    # get normalized image
 #    img_normalized = transform_norm(img).float()
 #    img_normalized = img_normalized.unsqueeze_(0)
-#    # input = Variable(image_tensor)
 #    img_normalized = img_normalized.to(device)
 #    # print(img_normalized.shape)
 #    with torch.no_grad():
