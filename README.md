@@ -1,7 +1,7 @@
 # OCT-Image-Classification
 Optical Coherence Tomography based Image Classification
 
-Labels   -         Diesases
+Labels   -         Diseases
 
 0        - Epiretinal membrane (ERM)
 
