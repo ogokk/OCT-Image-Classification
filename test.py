@@ -22,8 +22,6 @@ recall_per_batch = []
 # Data preprocessing and augmentation
 test_data_transforms = transforms.Compose([
     transforms.Resize((224, 224)),
-    # transforms.RandomHorizontalFlip(p=0.5),
-    # transforms.RandomAutocontrast(p=0.2),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -63,16 +61,12 @@ for i in range(monte_carlo_iter):
     
     test_loader = DataLoader(test_dataset, batch_size=batch_size, 
                                                 sampler=test_sampler)
-    # test_loader = DataLoader(test_dataset, batch_size=batch_size, 
-    #                                             shuffle = True)
-
     
     for i, (inputs, classes) in enumerate(tqdm(test_loader)):
         inputs, classes = next(iter(test_loader))
         inputs=inputs.to(device)
         outputs=model(inputs)
-       # outputs = outputs.to(device)
-       # print(outputs)
+        # print(outputs)
         _, preds = torch.max(outputs, 1)
         preds=preds.cpu().numpy()
         classes=classes.numpy()
