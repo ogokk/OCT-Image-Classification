@@ -93,20 +93,6 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 
 
 # #-------------------------SINGLE IMAGE AND BATCH TESTING---------------------
-# from tqdm import tqdm
-# import torch
-# from sklearn.metrics import f1_score
-# #Test
-# # Load
-# model = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2)
-# model.fc = MyResModel(num_classes = 4)
-# model.to(device)
-# path = "C:/Users/ozangokkan/Desktop/brainmri/best_model.pth"
-# model.load_state_dict(torch.load(path))
-
-
-
-
 # #Single batch prediction
 # inputs, classes = next(iter(test_loader))
 # inputs=inputs.to(device)
