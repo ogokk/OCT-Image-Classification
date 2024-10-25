@@ -12,3 +12,6 @@ Labels   -         Diseases
 3        - Normal OCT
 
 4        - Vitreomacular traction (VMT) 
+
+
+![oct_results](https://github.com/user-attachments/assets/653c077f-8c81-46e2-8f53-731edeafd951)
