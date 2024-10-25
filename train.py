@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct 14 11:43:39 2024
+Created on Mon Oct 14 11:43:39 2024
 
 @author: ozangokkan
 """
