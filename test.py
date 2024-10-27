@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon Oct 21 13:18:03 2024
-
+Testing external OCT images
 @author: ozangokkan
 """
 import torch
