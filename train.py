@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon Oct 14 11:43:39 2024
-
+Optical Coherence Tomography based 5-class 
+image classification using Monte-Carlo validation
 @author: ozangokkan
 """
 import torch
