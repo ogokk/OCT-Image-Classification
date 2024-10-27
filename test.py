@@ -13,11 +13,6 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data.sampler import SubsetRandomSampler
 from tqdm import tqdm
 from sklearn.metrics import f1_score,matthews_corrcoef, balanced_accuracy_score, recall_score
-preds_classes = []
-f1_scores_per_batch = []
-mcc_scores_per_batch = []
-bas_per_batch = []
-recall_per_batch = []
 
 # Data preprocessing
 test_data_transforms = transforms.Compose([
@@ -38,6 +33,8 @@ preds_classes = []
 f1_scores_per_batch = []
 mcc_scores_per_batch = []
 bas_per_batch = []
+recall_per_batch = []
+
 with torch.no_grad():
     model = CombinedModel(num_classes=5)  # Use the same num_classes as in training
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -125,7 +122,7 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 #       index = output.data.cpu().numpy().argmax()
 #       classes = ["glioma","meningioma","normal","pituitary"]
 #       class_name = classes[index]
-#       return class_name
+#    return class_name
 
 # predict_class = pre_image('C:/Users/ozangokkan/Desktop/brainmri/dataset/Testing/pituitary/Te-pi_0010.jpg',model)
 # print(predict_class)
