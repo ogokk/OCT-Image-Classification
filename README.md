@@ -20,7 +20,7 @@ Labels   -         Diseases
 
 # Usage Instructions for Jupyter Notebooks
 ```bash
-!git clone [https://github.com/ogokk/OCT-Image-Classification.git]
+![git clone https://github.com/ogokk/OCT-Image-Classification.git]
 cd OCT-Image-Classification
 pip install -r requirements.txt
 ```
