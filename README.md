@@ -14,11 +14,11 @@ Labels   -         Diseases
 4        - Vitreomacular traction (VMT) 
 
 
-![oct_results](https://github.com/user-attachments/assets/653c077f-8c81-46e2-8f53-731edeafd951)
+![OCT_results](https://github.com/user-attachments/assets/2ad3c911-e212-481f-981a-c0bc686110e1)
 
 
 
-# Usage Instructions for Jupyter Notebooks
+# Usage Instruction for Jupyter Notebook
 ```bash
 !git clone https://github.com/ogokk/OCT-Image-Classification.git
 cd OCT-Image-Classification
