@@ -1,7 +1,4 @@
-"""
-Testing external OCT images
-@author: ozangokkan
-"""
+
 import torch
 from train import CombinedModel
 import numpy as np
@@ -51,7 +48,7 @@ for i in range(monte_carlo_iter):
         np.random.shuffle(indices)
     test_indices = indices
     
-    # Creating data samplers and loaders:
+    
     test_sampler = SubsetRandomSampler(test_indices)
     
     test_loader = DataLoader(test_dataset, batch_size=batch_size, 
@@ -108,7 +105,7 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 #    std = [0.229, 0.224, 0.225]
 #    transform_norm = transforms.Compose([transforms.ToTensor(), 
 #    transforms.Resize((224,224)),transforms.Normalize(mean, std)])
-#    # get normalized image
+    
 #    img_normalized = transform_norm(img).float()
 #    img_normalized = img_normalized.unsqueeze_(0)
 #    img_normalized = img_normalized.to(device)
@@ -122,7 +119,7 @@ print("\nSensitivity (Recall) score is :%{:.2f}".format(100*np.mean(recall_per_b
 #       class_name = classes[index]
 #    return class_name
 
-# predict_class = pre_image('C:/Users/ozangokkan/Desktop/brainmri/dataset/Testing/pituitary/Te-pi_0010.jpg',model)
+# predict_class = pre_image('C:/Users/ozangokkan/Desktop/dataset/Testing/OCT/0010.jpg',model)
 # print(predict_class)
 
 
