@@ -38,9 +38,6 @@ If you use this work in your research, please cite the following paper:
   title={Comparing Auto-Machine Learning and Expert-Designed Models in Diagnosing Vitreomacular Interface Disorders},
   author={Durmaz Engin, Ceren and Gokkan, Mahmut Ozan and Koksaldi, Seher and Kayabasi, Mustafa and Besenk, Ufuk and Selver, Mustafa Alper and Grzybowski, Andrzej},
   journal={Journal of Clinical Medicine},
-  volume={14},
-  number={8},
-  pages={2774},
   year={2025},
   publisher={MDPI}
 }
