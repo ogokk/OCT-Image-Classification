@@ -1,8 +1,4 @@
-"""
-Optical Coherence Tomography based 5-class 
-image classification using Monte-Carlo validation
-@author: ozangokkan
-"""
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
