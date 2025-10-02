@@ -1,5 +1,5 @@
 # OCT-Image-Classification 
-[[Paper]](https://www.mdpi.com/2077-0383/14/8/2774)
+[**[Paper]**](https://www.mdpi.com/2077-0383/14/8/2774)
 
 Optical Coherence Tomography based Image Classification
 
