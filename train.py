@@ -102,19 +102,16 @@ def train_model(train_loader, model, criterion, optimizer, scaler, device):
 
     for inputs, labels in tqdm(train_loader):
         inputs, labels = inputs.to(device), labels.to(device)
-        optimizer.zero_grad()
         outputs = model(inputs).to(device)
         loss = criterion(outputs, labels)
-        optimizer.step()
         loss = loss / accumulation_steps
         # loss.backward()
         scaler.scale(loss).backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # Gradient clipping
-        scaler.step(optimizer)
-        scaler.update()
         #Gradient Accumulation
         if (itr + 1 ) % accumulation_steps == 0:
-            optimizer.step()
+            scaler.step(optimizer)
+            scaler.update()
             optimizer.zero_grad()
         itr += 1
         
@@ -225,3 +222,4 @@ for itr in range(monte_carlo_iter):
 
 # plt.tight_layout()
 # plt.show()
+
