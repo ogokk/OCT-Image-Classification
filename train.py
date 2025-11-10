@@ -169,7 +169,7 @@ for itr in range(monte_carlo_iter):
         scaler = GradScaler()
         scheduler = ReduceLROnPlateau(optimizer, mode="min", patience=3, verbose=True)    
     
-    
+        #model = CombinedModel(num_classes=5).to(device)
         n_epoch_stop = 10
         best_val_loss = float('inf')
         val_no_improve = 0
@@ -222,5 +222,6 @@ for itr in range(monte_carlo_iter):
 
 # plt.tight_layout()
 # plt.show()
+
 
 
