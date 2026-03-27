@@ -1,5 +1,8 @@
-# OCT-Image-Classification 
-[**[Paper]**](https://www.mdpi.com/2077-0383/14/8/2774)
+<h1 align="center">
+   Comparing Auto-Machine Learning and Expert-Designed Models in Diagnosing Vitreomacular Interface Disorders
+<a href="https://www.mdpi.com/2077-0383/14/8/2774">[Paper]</a>
+</h1>
+
 
 Optical Coherence Tomography based Image Classification
 
